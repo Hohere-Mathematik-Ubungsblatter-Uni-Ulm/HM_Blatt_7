@@ -1,0 +1,161 @@
+\section{Aufgabe 3}
+\subsection{a)}
+    $$
+    A = \begin{pmatrix}
+        1 & 1 & -1 \\
+        0 & 1 & 0 \\
+        1 & 0 & 1
+    \end{pmatrix} \in \CC^{3\times 3}
+    $$
+    Finding the eigenvalues by setting $det(A-\lambda E_3)=0$
+    $$det(A-\lambda E_3)=-\lambda^3+3\cdot\lambda^2-4\cdot\lambda+2=-(\lambda-1)\cdot(\lambda^2-2\cdot\lambda+2)=-(\lambda-1)\cdot(\lambda-(1-i))\cdot(\lambda-(1+i))=0$$
+    $\Rightarrow \begin{matrix}
+        \lambda_1 = 1 \\
+        \lambda_2 = 1-i \\
+        \lambda_3 = 1+i
+    \end{matrix}$ \\
+    Getting the eigenvectors for every $\lambda$:\\
+    $$\lambda_1=1: \Rightarrow A-\lambda_1E_3=
+    \left(\begin{matrix}
+        0 & 1 & -1 \\
+        0 & 0 & 0 \\
+        1 & 0 & 0
+    \end{matrix}\right)$$
+
+    $$\begin{gmatrix}[p]
+        0 & 1 & -1 & \BAR & 0 \\
+        0 & 0 & 0 & \BAR & 0 \\
+        1 & 0 & 0 & \BAR & 0
+        \rowops
+        \swap{0}{2}
+    \end{gmatrix}\rightarrow
+    \begin{gmatrix}[p]
+        1 & 0 & 0 & \BAR &0 \\
+        0 & 0 & 0 & \BAR & 0 \\
+        0 & 1 & -1 & \BAR & 0
+        \rowops
+        \swap{1}{2}
+    \end{gmatrix} \rightarrow
+    \begin{gmatrix}[p]
+        1 & 0 & 0 & \BAR &0 \\
+        0 & 1 & -1 & \BAR & 0 \\
+        0 & 0 & 0 & \BAR & 0 
+    \end{gmatrix}
+    $$
+    $\Rightarrow x_2 = x_3, x_1 = 0$. \\
+    Sei $x_3 = 1 \Rightarrow v_1 = \begin{pmatrix}
+        0 \\ 1 \\ 1
+    \end{pmatrix}$
+
+    $$\lambda_2 = 1-i: \Rightarrow A-\lambda_2 E_3 = \left(\begin{matrix}
+        i & 1 & -1 \\
+        0 & i & 0 \\
+        1 & 0 & i
+    \end{matrix}\right)$$
+    $$\begin{gmatrix}[p]
+        i & 1 & -1 & \BAR & 0 \\
+        0 & i & 0 & \BAR & 0 \\
+        1 & 0 & i & \BAR & 0
+        \rowops
+        \mult{0}{\cdot -i}
+        \add[-1]{0}{2}
+    \end{gmatrix}\rightarrow
+    \begin{gmatrix}[p]
+        1 & -i & i & \BAR & 0 \\
+        0 & i & 0 & \BAR & 0 \\
+        0 & i & 0 & \BAR & 0
+        \rowops
+        \mult{1}{\cdot -i}
+        \add[-i]{1}{2}
+    \end{gmatrix} \rightarrow
+    \begin{gmatrix}[p]
+        1 & -i & i & \BAR & 0 \\
+        0 & 1 & 0 & \BAR & 0 \\
+        0 &  & 0 & \BAR & 0
+        \rowops
+        \add[i]{1}{0}
+    \end{gmatrix}
+    $$
+    $$\rightarrow\begin{gmatrix}[p]
+    1 & 0 & i & \BAR & 0 \\
+    0 & 1 & 0 & \BAR & 0 \\
+    0 & 0 & 0 & \BAR & 0
+    \end{gmatrix}
+    $$
+    $\Rightarrow x_2=0, x_1 = -ix_3$ \\
+    Seit $x_3 = 1 \Rightarrow v_2 = \begin{pmatrix}
+        -i \\ 0 \\ 1
+    \end{pmatrix}$
+
+    $$\lambda_3 = 1+i: \Rightarrow A-\lambda_2 E_3 = \left(\begin{matrix}
+        -i & 1 & -1 \\
+        0 & -i & 0 \\
+        1 & 0 & -i
+    \end{matrix}\right)$$
+    $$\begin{gmatrix}[p]
+        -i & 1 & -1 & \BAR & 0 \\
+        0 & -i & 0 & \BAR & 0 \\
+        1 & 0 & -i & \BAR & 0
+        \rowops
+        \mult{0}{\cdot i}
+        \add[-1]{0}{2}
+    \end{gmatrix}\rightarrow
+    \begin{gmatrix}[p]
+        1 & i & -i & \BAR & 0 \\
+        0 & -i & 0 & \BAR & 0 \\
+        0 & -i & 0 & \BAR & 0
+        \rowops
+        \mult{1}{\cdot i}
+        \add[i]{1}{2}
+    \end{gmatrix} \rightarrow
+    \begin{gmatrix}[p]
+        1 & 0 & -i & \BAR & 0 \\
+        0 & 1 & 0 & \BAR & 0 \\
+        0 & 0 & 0 & \BAR & 0
+        \rowops
+        \add[i]{1}{0}
+    \end{gmatrix}
+    $$
+    $$\rightarrow \begin{gmatrix}[p]
+        1 & 0 & -i & \BAR & 0 \\
+        0 & 1 & 0 & \BAR & 0 \\
+        0 & 0 & 0 & \BAR & 0
+    \end{gmatrix}$$
+    
+    $\Rightarrow x_2=0, x_1 = ix_3$ \\
+    Sei $x_3 = 1 \Rightarrow v_2 = \begin{pmatrix}
+        i \\ 0 \\ 1
+    \end{pmatrix}$
+
+\subsection{b)}
+\[
+B = \begin{pmatrix}
+\cos\varphi & -\sin\varphi \\
+\sin\varphi & \cos\varphi
+\end{pmatrix}
+\]
+
+\[
+\Rightarrow \det(R - \lambda I) = 0
+\]
+\[
+\begin{vmatrix}
+\cos\varphi - \lambda & -\sin\varphi \\
+\sin\varphi & \cos\varphi - \lambda
+\end{vmatrix}
+= 0
+\]
+The eigenvalues are: $\lambda = \cos\varphi \pm i\sin\varphi = e^{\pm i\varphi}$ \\
+
+And thus the eigenvectors are $
+v_+ = \begin{bmatrix}
+1 \\
+i
+\end{bmatrix}
+$ and
+$
+v_- = \begin{bmatrix}
+1 \\
+-i
+\end{bmatrix}
+$

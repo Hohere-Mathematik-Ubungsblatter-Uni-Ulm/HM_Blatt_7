@@ -1,0 +1,94 @@
+\section{Aufgabe 2}
+
+Wir mischen folgende drei Flüssigkeiten
+\begin{itemize}    \item \textbf{Flüssigkeit 1}: \( 80\% \text{H}_2\text{O} \), \( 0\% \text{H}_2\text{SO}_4 \), \( 20\% \) andere
+    \item \textbf{Flüssigkeit 2}: \( 20\% \text{H}_2\text{O} \), \( 70\% \text{H}_2\text{SO}_4 \), \( 10\% \) andere
+    \item \textbf{Flüssigkeit 3}: \( 40\% \text{H}_2\text{O} \), \( 60\% \text{H}_2\text{SO}_4 \), \( 0\% \) andere
+\end{itemize}
+
+Sei \( x_1, x_2, x_3 \) die Volumen der einzelnen Flüssigkeiten
+
+\subsection{a)}
+\( 40\% \ \text{H}_2\text{O} \), \( 54\% \ \text{H}_2\text{SO}_4 \), \( 6\% \) andere
+
+Wir definieren das Lineare Gleichungssystem als:
+$$
+\begin{aligned}
+    0,8x_1 + 0,2x_2 + 0,4x_3 & = & 0,4(x_1 + x_2 + x_3) \\
+    0,7x_2 + 0,6x_3 & = & 0,54(x_1 + x_2 + x_3) \\
+    0,2x_1 + 0,1x_2 & = & 0,06(x_1 + x_2 + x_3) \\
+\end{aligned} $$
+mit $x_1 \leq 300, \quad x_2 \leq 1,4, \quad x_3 \leq 3,2, \quad x_1, x_2, x_3 \geq 0$
+
+
+$$
+\Rightarrow \quad
+\begin{aligned}
+    0,8x_1 + 0,2x_2 + 0,4x_3 & = & 0,4x_1 + 0,4x_2 + 0,4x_3) \\
+    0,7x_2 + 0,6x_3 & = & 0,54x_1 + 0,54x_2 + 0,54x_3 \\
+    0,2x_1 + 0,1x_2 & = & 0,06x_1 + 0,06x_2 + 0,06x_3 \\  
+\end{aligned}
+$$
+
+$$
+\Rightarrow \quad
+\begin{aligned}
+    0,4x_1-0,2x_2 & = & 0 \\
+    -0,54x_1+0,16x_2+0,06x_3 & = & 0 \\
+    0,14x_1+0,04x_2-0,06x_3 & = & 0
+\end{aligned}
+$$
+
+
+\[
+\Rightarrow \quad
+\begin{aligned}
+    &x_1 = 0,70 \ \text{L}, \\
+    &x_2 = 1,40 \ \text{L}, \\
+    &x_3 = 2,57 \ \text{L}
+\end{aligned}
+\]
+Das Maximale Volumen der neuen Mischung ist:
+\[
+x_1 + x_2 + x_3 = 4,67 \ \text{L},
+\]
+
+\subsection{b)}
+\( 34\% \text{H}_2\text{O} \), \( 53\% \text{H}_2\text{SO}_4 \), \( 13\% \) andere
+
+Wir definieren das Lineare Gleichungssystem als: 
+\[
+\begin{aligned}
+    0,8x_1 + 0,2x_2 + 0,4x_3 & = & 0,34(x_1 + x_2 + x_3) \\
+    0,7x_2 + 0,6x_3 & = & 0,53(x_1 + x_2 + x_3) \\
+    0,2x_1 + 0,1x_2 & = & 0,13(x_1 + x_2 + x_3)
+\end{aligned}
+\]
+Mit $x_1 \leq 300, \quad x_2 \leq 1,4, \quad x_3 \leq 3,2, \quad x_1, x_2, x_3 \geq 0$
+
+$$
+\Rightarrow \quad
+\begin{aligned}
+    0,8x_1 + 0,2x_2 + 0,4x_3 & = & 0,34x_1 + 0,34x_2 + 0,34x_3 \\
+    0,7x_2 + 0,6x_3 & = & 0,53x_1 + 0,53x_2 + 0,53x_3 \\
+    0,2x_1 + 0,1x_2 & = & 0,13x_1 + 0,13x_2 + 0,13x_3 
+\end{aligned}
+$$
+
+$$
+\Rightarrow \quad
+\begin{aligned}
+    0,46x_1-0,14x_2+0,06x_3 & = & 0 \\
+    -0,53x_1 + 0,17x_2 + 0,07x_3 & = & 0\\
+    0,07x_1 -0,03x_2 - 0,13x_3 & = & 0
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+    x_1=-5x_3 \\
+    x_2=-16x_3 \\
+    x_3=x_3 \\
+\end{aligned}
+$$
+$\Rightarrow$ keine Eindeutige Lösung, allerdings, bzw. Negative Lösungen für $x_1, x_2 $ oder $x_3 \lightning$

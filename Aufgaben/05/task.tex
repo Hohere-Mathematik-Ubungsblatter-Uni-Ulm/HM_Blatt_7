@@ -1,0 +1,35 @@
+\section{Aufgabe 5}
+
+Gegeben seien die Matrizen \( L_i \) und \( L_j \) (für \( i < j \)), die wie folgt definiert sind:
+\[
+L_i = I + v_i e_i^T \quad \text{und} \quad L_j = I + v_j e_j^T,
+\]
+wobei \( v_i \) bzw. \( v_j \) Vektoren sind, die die Einträge unterhalb der Diagonalen in der \( i \)-ten bzw. \( j \)-ten Spalte enthalten, und \( e_i \) bzw. \( e_j \) Einheitsvektoren sind. Es gilt zu zeigen, dass das Produkt \( L_i \cdot L_j \) ebenfalls die erwartete Form liefert.
+
+Das Produkt der Matrizen lautet:
+\[
+L_i \cdot L_j = (I + v_i e_i^T)(I + v_j e_j^T).
+\]
+Durch Ausmultiplizieren ergibt sich:
+\[
+L_i \cdot L_j = I + v_i e_i^T + v_j e_j^T + (v_i e_i^T)(v_j e_j^T).
+\]
+
+Der letzte Term \( (v_i e_i^T)(v_j e_j^T) \) kann wie folgt umgeformt werden:
+\[
+(v_i e_i^T)(v_j e_j^T) = v_i (e_i^T e_j) e_j^T.
+\]
+Da die Einheitsvektoren \( e_i \) und \( e_j \) orthogonal sind (für \( i \neq j \)), gilt:
+\[
+e_i^T e_j = 0.
+\]
+Daher verschwindet der Term vollständig:
+\[
+(v_i e_i^T)(v_j e_j^T) = 0.
+\]
+Somit reduziert sich das Produkt auf:
+\[
+L_i \cdot L_j = I + v_i e_i^T + v_j e_j^T.
+\]
+
+\qed
